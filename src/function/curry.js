@@ -21,8 +21,6 @@ const curry = (func) => _curry(func.length, [], func);
 
 export default curry;
 
-export const curry1 = (fn) => (a) => fn(a);
-
 export const curry2 = (fn) => (a) => (b) => fn(a, b);
 
 export const curry3 = (fn) => (a) => (b) => (c) => fn(a, b, c);

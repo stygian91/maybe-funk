@@ -33,13 +33,6 @@ describe('curry', () => {
     expect(curried2(4) (5)).toEqual([2, 4, 5]);
   });
 
-  test('curry1', () => {
-    const fn = (a) => [a];
-    const curried = M.curry1(fn);
-
-    expect(curried(1)).toEqual([1]);
-  });
-
   test('curry2', () => {
     const fn = (a, b) => [a, b];
     const curried = M.curry2(fn);
