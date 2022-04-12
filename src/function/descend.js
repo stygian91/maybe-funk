@@ -1,5 +1,3 @@
-import { curry3 } from "./curry";
-
 /**
  * Creates a descending comparator function to be used with the sort function.
  * The `fn` argument must be a unary function that returns a value
@@ -13,7 +11,7 @@ import { curry3 } from "./curry";
  * @param {any} b
  * @returns {number}
  */
-const descend = (fn, a, b) => {
+const descend = (fn) => (a) => (b) => {
   const a1 = fn(a);
   const b1 = fn(b);
 
@@ -28,4 +26,4 @@ const descend = (fn, a, b) => {
   return 0;
 };
 
-export default curry3(descend);
+export default descend;

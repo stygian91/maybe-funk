@@ -1,5 +1,3 @@
-import { curry2 } from "./curry";
-
 /**
  * Runs a function on an argument and returns the argument.
  *
@@ -7,9 +5,9 @@ import { curry2 } from "./curry";
  * @param {any} arg
  * @returns {any}
  */
-const tap = (func, arg) => {
+const tap = (func) => (arg) => {
   func(arg);
   return arg;
 };
 
-export default curry2(tap);
+export default tap;
