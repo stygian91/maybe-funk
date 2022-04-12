@@ -1,6 +1,6 @@
 export { default as always } from "./always";
 export { default as ascend } from "./ascend";
-// export { default as compose } from "./compose";
+export { default as compose } from "./compose";
 // export { default as construct, constructN } from "./construct";
 // export { default as converge } from "./converge";
 export { default as curry, curry1, curry2, curry3, curry4, curry5 } from "./curry";
@@ -11,7 +11,7 @@ export { default as curry, curry1, curry2, curry3, curry4, curry5 } from "./curr
 // export { default as F } from "./F";
 // export { default as flip } from "./flip";
 // export { default as identity } from "./identity";
-// export { default as pipe } from "./pipe";
+export { default as pipe } from "./pipe";
 // export { default as T } from "./T";
 // export { default as tap } from "./tap";
 // export { default as thunkify } from "./thunkify";
