@@ -6,7 +6,7 @@ export { default as curry, curry1, curry2, curry3, curry4, curry5 } from "./curr
 export { default as descend } from "./descend";
 // export { default as F } from "./F";
 // export { default as flip } from "./flip";
-// export { default as identity } from "./identity";
+export { default as identity } from "./identity";
 export { default as pipe } from "./pipe";
 // export { default as T } from "./T";
 // export { default as tap } from "./tap";
