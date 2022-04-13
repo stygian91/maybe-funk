@@ -1,5 +1,20 @@
 import * as M from "../../src";
 
+const createIterable = (begin, end) => ({
+  [Symbol.iterator]() {
+    return {
+      i: begin,
+      next() {
+        if (this.i < end) {
+          return { value: this.i++, done: false };
+        }
+
+        return { value: undefined, done: true };
+      },
+    };
+  },
+});
+
 describe('findLast', () => {
   test('finds last element that matches', () => {
     const fn = x => x > 10;
@@ -28,5 +43,17 @@ describe('findLast', () => {
     const result = M.findLast(fn) (list);
 
     expect(result.isNothing).toEqual(true);
+  });
+
+  test('works with iterables', () => {
+    const iterable = createIterable(0, 5);
+    const fn = x => x < 3;
+    const result = M.findLast(fn) (iterable);
+    expect(result.join()).toEqual(2);
+
+    const iterable2 = createIterable(0, 5);
+    const fn2 = x => x < 0;
+    const result2 = M.findLast(fn2) (iterable2);
+    expect(result2.isNothing).toEqual(true);
   });
 });
