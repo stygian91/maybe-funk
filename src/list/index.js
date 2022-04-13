@@ -11,8 +11,8 @@
 // export { default as filter } from "./filter";
 export { default as find } from "./find";
 export { default as findIndex } from "./findIndex";
-// export { default as findLast } from "./findLast";
-// export { default as findLastIndex } from "./findLastIndex";
+export { default as findLast } from "./findLast";
+export { default as findLastIndex } from "./findLastIndex";
 // export { default as flatten } from "./flatten";
 // export { default as forEach } from "./forEach";
 // export { default as groupBy } from "./groupBy";
