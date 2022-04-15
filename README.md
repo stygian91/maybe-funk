@@ -1,5 +1,7 @@
 # maybe-funk
 
+## This was done as an experiment and its development is stopped.
+
 A FUNctional libary.
 
 ---
